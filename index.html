@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <title>A JavaScript project</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <!-- <div id="app"></div> -->
+  <div> 
+    <div class="webcam" style="background-color:pink; visibility: hidden; display:none">
+      <canvas id="webcam-canvas" width="160" height="120"></canvas>
+      <!-- <video id="webcam-video" autoplay playsinline width="320" height="240"></video> -->
+    </div>
+
+    <div style="width:100%; height:100%; background-color: blueviolet; overflow: hidden;"> 
+      <div style="width:100%; height:100%; position: absolute; display:flex; background-color:rgb(39, 39, 39); justify-content: left;">
+        <video id="webcam-video" autoplay style="width: 1080px; height: auto;"></video>
+      </div> 
+      <div id="p5welcome" class="p5welcome" style="width:100%; height:100%; position: absolute"></div>
+      <div id="p5trace" class="p5trace" style="width:100%; height:100%; position: absolute"></div>
+      <div id="p5sketch" class="p5sketch" style="width:100%; height:100%; position: absolute"></div>
+      <div style="width:100%; height:100%; position: absolute; display:flex; justify-content: left;"> 
+        <div id="p5overlay" class="p5overlay" style="width:1080px; height:100%; position: absolute"></div>
+      </div> 
+      <div id="p5menu" class="p5menu" style="width:100%; height:100%; position: absolute"></div>
+      <div id="p5hand" class="p5hand" style="width:100%; height:100%; position: absolute"></div>
+    </div> 
+  </div>  
+
+
+  <!-- hand tracking -->
+  <script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest/dist/handtrack.min.js"> </script>
+
+  <!-- p5.js -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+
+  <!-- my files -->
+  <script src="main.js"></script>
+  <!-- <script src="visuals.js"></script> -->
+</body>
+</html>
+
+<style>
+  body {
+    margin: 0; 
+    padding: 0; 
+    overflow:hidden
+  }
+
+  video{
+    justify-content:center;
+    align-self:center;
+    align-content:center;
+  }
+
+  #webcam-video
+  {
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+  }
+</style>
